@@ -1,5 +1,11 @@
+/* MOBILE OPTIMIZATION */
 body {
     background-color: #111111;
+    background-position: bottom;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
+
 }
 
 div {
@@ -7,13 +13,8 @@ div {
     flex-direction: column;
     align-items: center;
     color: white;
-    height: 100vh;
+   height: 100vh;
 
-    background-position: bottom;
-    background-size: 25rem;
-    background-repeat: no-repeat;
-    background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
-    background-color: #111111;
 }
 
 img {
@@ -57,6 +58,66 @@ p {
     margin-right: 100px;
 }
 
+/* TABLET OPTIMIZATION */
+@media only screen and (min-width: 768px){
+    body {
+        background-color: black;
+        background-position: top;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url('https://mfiles.alphacoders.com/828/828476.jpg');
+    }
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;    
+    }
+    
+    img {
+        border-radius: 5px;
+        border: white 2px double;
+        height: 300px;
+    }
+    
+    h1{
+        margin-bottom: 0;
+        font-family: 'Fuzzy Bubbles', cursive;
+        font-size: 34px;
+        font-weight:bolder;
+    }
+    
+    h3{
+        font-family: 'Fuzzy Bubbles', cursive;
+        font-size: 25px;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    input {
+       
+        font-family: 'Fuzzy Bubbles', cursive;
+        margin-left: 10px;
+        margin-right: 35px;
+    }
+    
+    main {
+        font-family: 'Fuzzy Bubbles', cursive;
+        font-size: 18px;
+        height: 500px;
+    }
+
+    p{
+        
+    }
+}
+
+/* DESKTOP OPTIMIZATION */
 @media only screen and (min-width: 1024px){
     body {
         background-position: top;
@@ -100,4 +161,7 @@ p {
         font-family: 'Fuzzy Bubbles', cursive;
     }
     
+    p{
+        margin-left: 15px;
+    }
 }
