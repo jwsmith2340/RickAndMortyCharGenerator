@@ -6,16 +6,10 @@ const URL = 'https://rickandmortyapi.com/api/character/?name='
 
 //Event initiation
 $form.on('submit', handleSubmit)
-// for (let i = 0; i < 1000; i ++){
-//     let array = []
-//     array[i] = randomIndex;
-//     console.log(array[i])
-//     if (array[i] > 19 || array[i] < 0){
-//         alert('problem')
-//     }
-// }
 
+//Function Block
 
+//Render retrieved values to HTML
 function render(evt){ 
     let randomIndex = arrayRandomizer(evt);
         
@@ -27,12 +21,14 @@ function render(evt){
     `)
 }
 
+//Handle submit button, prevent page reload, require user input text, and assign
+//The user's val to a local variable to be used to concatonate the URL for AJAX request
+//Input field is then cleared, ajax retrieval initiates render(), error contingency in place
 function handleSubmit(event){
-    event.preventDefault(); //prevent page reload
-    if (!$input.val()) return; //user must input text
-    const userValue = $input.val(); //assigning user input so we can clear text box
-    //console.log(userValue)
-    $input.val(''); //clears the input field
+    event.preventDefault();
+    if (!$input.val()) return; 
+    const userValue = $input.val(); 
+    $input.val(''); 
 
     $.ajax(URL + userValue).then(function(param){
         render(param);
@@ -42,8 +38,10 @@ function handleSubmit(event){
     })
 }
 
+//Arrays for characters are different lengths, this code block returns a random number within
+//the range for each character selected so the full catalog can be accessed at random. 
 function arrayRandomizer(eo){
-    let randomLength = eo.results.length //Random return of array value, all names are stored in an array, 
-    let randomIndex = Math.floor(Math.random() * randomLength); //so this is how they can be accessed
+    let randomLength = eo.results.length 
+    let randomIndex = Math.floor(Math.random() * randomLength); 
     return randomIndex;
 }
