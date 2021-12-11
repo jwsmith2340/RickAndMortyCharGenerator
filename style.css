@@ -28,13 +28,13 @@ h1{
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: Fuzzy Bubbles;
     font-size: 18px;
     font-weight:bolder;
 }
 
 h3{
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: Fuzzy Bubbles;
     font-size: 15px;
 }
 
@@ -46,11 +46,11 @@ form{
 
 input {
    
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: Fuzzy Bubbles;
 }
 
 main {
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: Fuzzy Bubbles;
     font-size: 12px;
 }
 
@@ -83,13 +83,13 @@ p {
     
     h1{
         margin-bottom: 0;
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: Fuzzy Bubbles;
         font-size: 34px;
         font-weight:bolder;
     }
     
     h3{
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: Fuzzy Bubbles;
         font-size: 25px;
     }
     
@@ -101,13 +101,13 @@ p {
     
     input {
        
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: Fuzzy Bubbles;
         margin-left: 10px;
         margin-right: 35px;
     }
     
     main {
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: Fuzzy Bubbles;
         font-size: 18px;
         height: 500px;
     }
@@ -142,11 +142,11 @@ p {
     
     h1{
         margin-bottom: 0;
-        font-family: 'Fuzzy Bubbles';
+        font-family: Fuzzy Bubbles;
     }
     
     h3{
-        font-family: 'Fuzzy Bubbles';
+        font-family: Fuzzy Bubbles;
     }
     
     form{
@@ -158,7 +158,7 @@ p {
     input {
         margin-left: 10px;
         margin-right: 13px;
-        font-family: 'Fuzzy Bubbles';
+        font-family: Fuzzy Bubbles;
     }
     p {
         margin: 20px;
