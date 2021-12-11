@@ -14,10 +14,10 @@ function render(evt){
     let randomIndex = arrayRandomizer(evt);
         
     $main.html(`
-    <p>Name: ${evt.results[randomIndex].name}</p>
-    <p>Species: ${evt.results[randomIndex].species}</p>
-    <p>Status: ${evt.results[randomIndex].status}</p>
-    <div><img src="${evt.results[randomIndex].image}"></div>
+        <p>Name: ${evt.results[randomIndex].name}</p>
+        <p>Species: ${evt.results[randomIndex].species}</p>
+        <p>Status: ${evt.results[randomIndex].status}</p>
+        <div><img src="${evt.results[randomIndex].image}"></div>
     `)
 }
 
