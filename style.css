@@ -1,46 +1,53 @@
-/* MOBILE OPTIMIZATION */
-body {
-background-color: black;
-background-position: top;
-background-size: 25rem;
-background-repeat: no-repeat;
-background-image: url('https://wallpapers-hub.art/wallpaper-images/401171.jpg');
-background-attachment: fixed;
-}
 /* body:before {    ****This was Stephan's resource he shared, I need to check the current iteration on
-  content: "";      ****Hannah's iPhone before implementing this, because it overrides the background
-  display: block;   ****image on all of the other media queries
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
-/* 
-
-    background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center bottom;
-    background-size: 60vh;
-    /*background-attachment: fixed; */
-    /* background-color: #111111;
-    display: block;
+    content: "";      ****Hannah's iPhone before implementing this, because it overrides the background
+    display: block;   ****image on all of the other media queries
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: -10;
+    background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+} */
+
+/* 
+
+background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center bottom;
+background-size: 60vh;
+/*background-attachment: fixed; */
+/* background-color: #111111;
+display: block;
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: -10;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 } */ 
+
+/* MOBILE OPTIMIZATION */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+  }
+
+body {
+    background-color: black;
+    background-position: top;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-image: url('https://wallpapers-hub.art/wallpaper-images/401171.jpg');
+    background-attachment: fixed;
+}
 
 div {
     display: flex;
