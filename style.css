@@ -1,15 +1,15 @@
 /* MOBILE OPTIMIZATION */
 body {
-background-color: #111111;
+background-color: black;
 background-position: bottom;
 background-size: 25rem;
 background-repeat: no-repeat;
-background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
+background-image: url('https://wallpapers-hub.art/wallpaper-images/401171.jpg');
 background-attachment: fixed;
 }
-/* body:before {
-  content: "";
-  display: block;
+/* body:before {    ****This was Stephan's resource he shared, I need to check the current iteration on
+  content: "";      ****Hannah's iPhone before implementing this, because it overrides the background
+  display: block;   ****image on all of the other media queries
   position: fixed;
   left: 0;
   top: 0;
