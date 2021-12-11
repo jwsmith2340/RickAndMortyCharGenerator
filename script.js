@@ -15,11 +15,9 @@ $form.on('submit', handleSubmit)
 //     }
 // }
 
-function render(evt){ 
-    let randomLength = evt.results.length //Random return of array value, all names are stored in an array, 
-    let randomIndex = Math.floor(Math.random() * randomLength); //so this is how they can be accessed
-    console.log(randomIndex)
 
+function render(evt){ 
+    let randomIndex = arrayRandomizer(evt);
         
     $main.html(`
     <p>Name: ${evt.results[randomIndex].name}</p>
@@ -42,4 +40,10 @@ function handleSubmit(event){
     function(error){
         console.log('Resultant error: ' + error);
     })
+}
+
+function arrayRandomizer(eo){
+    let randomLength = eo.results.length //Random return of array value, all names are stored in an array, 
+    let randomIndex = Math.floor(Math.random() * randomLength); //so this is how they can be accessed
+    return randomIndex;
 }
