@@ -6,16 +6,26 @@ const URL = 'https://rickandmortyapi.com/api/character/?name='
 
 //Event initiation
 $form.on('submit', handleSubmit)
+// for (let i = 0; i < 1000; i ++){
+//     let array = []
+//     array[i] = randomIndex;
+//     console.log(array[i])
+//     if (array[i] > 19 || array[i] < 0){
+//         alert('problem')
+//     }
+// }
 
-//const $test = $.ajax('https://rickandmortyapi.com/api/character/?name=rick')
-//$test.then(render)
+function render(evt){ 
+    let randomLength = evt.results.length //Random return of array value, all names are stored in an array, 
+    let randomIndex = Math.floor(Math.random() * randomLength); //so this is how they can be accessed
+    console.log(randomIndex)
 
-function render(evt){
+        
     $main.html(`
-    <p>Name: ${evt.results[0].name}</p>
-    <p>Species: ${evt.results[0].species}</p>
-    <p>Status: ${evt.results[0].status}</p>
-    <div><img src="${evt.results[0].image}"></div>
+    <p>Name: ${evt.results[randomIndex].name}</p>
+    <p>Species: ${evt.results[randomIndex].species}</p>
+    <p>Status: ${evt.results[randomIndex].status}</p>
+    <div><img src="${evt.results[randomIndex].image}"></div>
     `)
 }
 
