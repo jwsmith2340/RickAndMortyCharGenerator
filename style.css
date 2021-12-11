@@ -1,11 +1,13 @@
 /* MOBILE OPTIMIZATION */
-/* background-color: #111111;
+body {
+background-color: #111111;
 background-position: bottom;
 background-size: 25rem;
 background-repeat: no-repeat;
 background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
-background-attachment: fixed; */
-body:before {
+background-attachment: fixed;
+}
+/* body:before {
   content: "";
   display: block;
   position: fixed;
@@ -19,7 +21,7 @@ body:before {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 /* 
 
