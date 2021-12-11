@@ -5,7 +5,7 @@ background-size: 25rem;
 background-repeat: no-repeat;
 background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
 background-attachment: fixed; */
-body {
+body:before {
     background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center bottom fixed;
     background-size: 60vh;
     /*background-attachment: fixed; */
@@ -18,9 +18,9 @@ body {
     height: 100%;
     z-index: -10;
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 div {
