@@ -142,11 +142,11 @@ p {
     
     h1{
         margin-bottom: 0;
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: 'Fuzzy Bubbles';
     }
     
     h3{
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: 'Fuzzy Bubbles';
     }
     
     form{
@@ -158,10 +158,9 @@ p {
     input {
         margin-left: 10px;
         margin-right: 13px;
-        font-family: 'Fuzzy Bubbles', cursive;
+        font-family: 'Fuzzy Bubbles';
     }
-    
-    p{
-        margin-left: 15px;
+    p {
+        margin: 20px;
     }
 }
