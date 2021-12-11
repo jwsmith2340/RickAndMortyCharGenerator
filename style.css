@@ -1,9 +1,5 @@
 body {
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url('https://www.enjpg.com/img/2020/rick-and-morty-8.png');
-    background-color: black;
+    background-color: #111111;
 }
 
 div {
@@ -11,16 +7,34 @@ div {
     flex-direction: column;
     align-items: center;
     color: white;
+    height: 100vh;
+
+    background-position: bottom;
+    background-size: 25rem;
+    background-repeat: no-repeat;
+    background-image: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755');
+    background-color: #111111;
 }
 
 img {
     border-radius: 5px;
     border: white 2px double;
-    height: 250px;
+    height: 200px;
 }
 
 h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 18px;
+    font-weight:bolder;
+}
+
+h3{
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 15px;
 }
 
 form{
@@ -30,6 +44,60 @@ form{
 }
 
 input {
-    margin-left: 10px;
-    margin-right: 22px;
+   
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+main {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 12px;
+}
+
+p {
+    margin-right: 100px;
+}
+
+@media only screen and (min-width: 1024px){
+    body {
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('https://www.enjpg.com/img/2020/rick-and-morty-8.png');
+        background-color: black;
+    }
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+    
+    img {
+        border-radius: 5px;
+        border: white 2px double;
+        height: 250px;
+    }
+    
+    h1{
+        margin-bottom: 0;
+        font-family: 'Fuzzy Bubbles', cursive;
+    }
+    
+    h3{
+        font-family: 'Fuzzy Bubbles', cursive;
+    }
+    
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    input {
+        margin-left: 10px;
+        margin-right: 13px;
+        font-family: 'Fuzzy Bubbles', cursive;
+    }
+    
 }
