@@ -1,6 +1,6 @@
-#Rick an Morty Random Character Generator
+# Rick an Morty Random Character Generator
 
-This app generates a random iteration of characters in the Rick and Morty universe. In keeping with the spirit of the show, when you search for a character, you could return any version from any universe.
+This app generates a random iteration of characters in the Rick and Morty universe. In keeping with the spirit of the show, when you search for a character, you could return any version from the multiverse. So, search for Rick a few times in a row and see which versions you end up with.
 
 ### Technologies Used
 
@@ -13,14 +13,17 @@ This app generates a random iteration of characters in the Rick and Morty univer
 ### Screenshots
 
 *Desktop Format*
+
 [![Screen-Shot-2021-12-11-at-6-13-20-AM.png](https://i.postimg.cc/JhNXH0m0/Screen-Shot-2021-12-11-at-6-13-20-AM.png)](https://postimg.cc/3ywNPKkQ)
 
 
 *Tablet Format*
+
 [![Screen-Shot-2021-12-11-at-7-49-18-AM.png](https://i.postimg.cc/V67W5vBM/Screen-Shot-2021-12-11-at-7-49-18-AM.png)](https://postimg.cc/S2MMvyPN)
 
 
 *Mobile Format*
+
 [![Screen-Shot-2021-12-11-at-7-51-01-AM.png](https://i.postimg.cc/cJhQ5Czj/Screen-Shot-2021-12-11-at-7-51-01-AM.png)](https://postimg.cc/7CCG5HwM)
 
 ### Getting Started
