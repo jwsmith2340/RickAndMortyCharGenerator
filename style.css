@@ -86,7 +86,8 @@ form{
 }
 
 input {
-   
+    margin-left: 5px;
+    margin-right: 5px;
     font-family: Fuzzy Bubbles;
 }
 
@@ -97,6 +98,18 @@ main {
 
 p {
     margin-right: 100px;
+}
+
+.explanation{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-family: Fuzzy Bubbles;
+    font-size: 12px;
+}
+.explanation2{
+    margin-top: 0;
+    font-family: Fuzzy Bubbles;
+    font-size: 12px;
 }
 
 /* TABLET OPTIMIZATION */
@@ -154,8 +167,16 @@ p {
         height: 500px;
     }
 
-    p{
-        
+    .explanation{
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: Fuzzy Bubbles;
+        font-size: 18px;
+    }
+    .explanation2{
+        margin-top: 0;
+        font-family: Fuzzy Bubbles;
+        font-size: 18px;
     }
 }
 
