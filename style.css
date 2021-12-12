@@ -110,6 +110,26 @@ p {
     margin-top: 0;
     font-family: Fuzzy Bubbles;
     font-size: 12px;
+    margin-bottom: 0;
+}
+
+.random{
+    margin-top: 0;
+    font-family: Fuzzy Bubbles;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#pickleRick{
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* TABLET OPTIMIZATION */
