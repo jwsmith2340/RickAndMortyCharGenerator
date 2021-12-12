@@ -121,7 +121,9 @@ $('#pickleRick').on('click', function(listener){
     let testURL = URL + testSecondFix
     //console.log(testURL)
 
-    console.log($.ajax(testURL))
+    $.ajax(testURL).then(function(par){
+        renderRandom(par)
+    })
 
 
 
@@ -133,3 +135,12 @@ $('#pickleRick').on('click', function(listener){
 //         <div><img src="${evt.results[randomIndex].image}"></div>
 //     `)
 })
+
+function renderRandom(randEvt){
+    $main.html(`
+        <p>Name: ${randEvt.results[0].name}</p>
+        <p>Species: ${randEvt.results[0].species}</p>
+        <p>Status: ${randEvt.results[0].status}</p>
+        <div><img src="${randEvt.results[0].image}"></div>
+    `)
+}
