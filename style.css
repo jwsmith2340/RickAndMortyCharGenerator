@@ -131,6 +131,7 @@ p {
     align-items: center;
     height: 60px;
     margin-bottom: 5px;
+    border: none;
 }
 
 h3 {
