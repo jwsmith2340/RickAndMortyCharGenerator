@@ -28,7 +28,7 @@ $('#pickleRick').on('click', handleRandomEvent) //Pickle Rick event
 //Input Submit - Render retrieved values to HTML
 function render(evt){ 
     let randomIndex = arrayRandomizer(evt);
-        
+        console.log(evt)
     $main.html(`
         <p>Name: ${evt.results[randomIndex].name}</p>
         <p>Species: ${evt.results[randomIndex].species}</p>
@@ -60,6 +60,7 @@ function handleSubmit(event){
     },
     function(error){
         console.log('Resultant error: ' + error);
+        backupFunction();
     })
 }
 //Handle Pickle Rick event, prevent page reload, generate random number based on 
@@ -71,16 +72,17 @@ function handleRandomEvent(listener){
     listener.preventDefault();
 
     let randomNum = Math.floor(Math.random() * nameArray.length)
-    let testSpaces = nameArray[randomNum]
-    let testFirstFix = testSpaces.split(' ').join('+')
-    let testSecondFix = testFirstFix.split('-').join('+')
-    let testURL = URL + testSecondFix
+    let nameSpaces = nameArray[randomNum]
+    let nameFirstFix = nameSpaces.split(' ').join('+')
+    let nameSecondFix = nameFirstFix.split('-').join('+')
+    let testURL = URL + nameSecondFix
     
     $.ajax(testURL).then(function(par){
         renderRandom(par)
     }, 
     function(error){
         console.log('Resultanat error: ' + error)
+        backupFunction();
     })
 }
 
@@ -90,4 +92,11 @@ function arrayRandomizer(eo){
     let randomLength = eo.results.length 
     let randomIndex = Math.floor(Math.random() * randomLength); 
     return randomIndex;
+}
+
+//Handles Error 404s by returning a set character
+function backupFunction() {
+    $.ajax(URL + 'pickle+rick').then(function(pa){
+        renderRandom(pa)
+    })
 }
