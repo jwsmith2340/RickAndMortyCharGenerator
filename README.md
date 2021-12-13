@@ -14,17 +14,17 @@ This app generates a random iteration of characters in the Rick and Morty univer
 
 **Desktop Format**
 
-[![Screen-Shot-2021-12-12-at-9-43-10-AM.png](https://i.postimg.cc/SxKSz62J/Screen-Shot-2021-12-12-at-9-43-10-AM.png)](https://postimg.cc/gnfFC6KW)
+[![Screen-Shot-2021-12-13-at-1-10-57-PM.png](https://i.postimg.cc/d0ndnNhY/Screen-Shot-2021-12-13-at-1-10-57-PM.png)](https://postimg.cc/XZGpY8KH)
 
 
 **Tablet Format**
 
-[![127-0-0-1-5500-index-html-i-Pad.png](https://i.postimg.cc/jd0nNFtC/127-0-0-1-5500-index-html-i-Pad.png)](https://postimg.cc/Th0PvQyX)
+[![127-0-0-1-5500-index-html-i-Pad-1.png](https://i.postimg.cc/7PjBgbvN/127-0-0-1-5500-index-html-i-Pad-1.png)](https://postimg.cc/kDFFCJgV)
 
 
 **Mobile Format**
 
-[![127-0-0-1-5500-index-html-i-Phone-X.png](https://i.postimg.cc/T3v1LLjb/127-0-0-1-5500-index-html-i-Phone-X.png)](https://postimg.cc/Vd4m2NVs)
+[![127-0-0-1-5500-index-html-i-Phone-X-1.png](https://i.postimg.cc/mrrNxGfD/127-0-0-1-5500-index-html-i-Phone-X-1.png)](https://postimg.cc/pmgn84db)
 ***
 ### Getting Started
 
