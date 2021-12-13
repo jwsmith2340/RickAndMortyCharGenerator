@@ -7,6 +7,7 @@ const pageURL = 'https://rickandmortyapi.com/api/character/?page=';
 let allCharactersArray = []
 let nameArray = []
 
+//Copying names of all characters to array for pickle rick button function
 allCharactersArray = ($.ajax(pageURL).then(function(evt){
     const pageLength = evt.info.pages
     nameArray;
