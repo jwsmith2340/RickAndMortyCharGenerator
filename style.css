@@ -1,38 +1,3 @@
-/* body:before {    ****This was Stephan's resource he shared, I need to check the current iteration on
-    content: "";      ****Hannah's iPhone before implementing this, because it overrides the background
-    display: block;   ****image on all of the other media queries
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-} */
-
-/* 
-
-background: url('https://static.wikia.nocookie.net/eb767c0a-5730-4705-b804-95bfec07d230/scale-to-width/755') no-repeat center bottom;
-background-size: 60vh;
-/*background-attachment: fixed; */
-/* background-color: #111111;
-display: block;
-position: fixed;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-z-index: -10;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-} */ 
-
 /* MOBILE OPTIMIZATION */
 html, body {
     margin: 0;
@@ -142,67 +107,87 @@ h3 {
 /* TABLET OPTIMIZATION */
 @media only screen and (min-width: 768px){
     body {
-        background-color: black;
-        background-position: top;
+        /* background-repeat: no-repeat; */
+        /* background-position: fixed; */
+        /* background-position: top; */
         background-size: 100%;
-        background-repeat: no-repeat;
         background-image: url('https://wallpaperaccess.com/full/793618.jpg');
-        background-position: fixed;
     }
     
     div {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;    
+        color: white;     */
     }
     
     img {
-        border-radius: 5px;
-        border: white 2px double;
+        /* border-radius: 5px;
+        border: white 2px double; */
         height: 300px;
     }
     
     h1{
-        margin-bottom: 0;
-        font-family: Fuzzy Bubbles;
+        /* margin-bottom: 0;
+        font-family: Fuzzy Bubbles; */
         font-size: 34px;
-        font-weight:bolder;
+        /* font-weight:bolder; */
     }
     
     h3{
-        font-family: Fuzzy Bubbles;
+        /* font-family: Fuzzy Bubbles; */
         font-size: 25px;
     }
     
-    form{
+    /* form{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
+    } */
     
     input {
        
-        font-family: Fuzzy Bubbles;
+        /* font-family: Fuzzy Bubbles; */
         margin-left: 10px;
         margin-right: 35px;
     }
     
     main {
-        font-family: Fuzzy Bubbles;
+        /* font-family: Fuzzy Bubbles; */
         font-size: 18px;
         height: 500px;
     }
 
     .explanation{
-        margin-top: 10px;
+        /* margin-top: 10px;
         margin-bottom: 0;
-        font-family: Fuzzy Bubbles;
+        font-family: Fuzzy Bubbles; */
         font-size: 18px;
     }
+
     .explanation2{
-        margin-top: 0;
-        font-family: Fuzzy Bubbles;
+        /* margin-top: 0;
+        font-family: Fuzzy Bubbles; */
+        font-size: 18px;
+    }
+
+    .random{
+        /* margin-top: 0;
+        font-family: Fuzzy Bubbles; */
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    #pickleRick{
+        /* justify-content: center;
+        align-items: center; */
+        height: 110px;
+        /* border: none; */
+    }
+    
+    h3 {
+        margin-top: 3px;
+        margin-bottom: 3px;
         font-size: 18px;
     }
 }
@@ -252,5 +237,39 @@ h3 {
     }
     p {
         margin: 20px;
+    }
+
+    .explanation{
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-family: Fuzzy Bubbles;
+        font-size: 18px;
+    }
+
+    .explanation2{
+        margin-top: 0;
+        font-family: Fuzzy Bubbles;
+        font-size: 18px;
+    }
+
+    .random{
+        margin-top: 0;
+        font-family: Fuzzy Bubbles;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    #pickleRick{
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+        margin-bottom: 5px;
+        border: none;
+    }
+
+    h3 {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 18px;
     }
 }
