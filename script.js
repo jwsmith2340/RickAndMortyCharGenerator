@@ -7,19 +7,20 @@ const pageURL = 'https://rickandmortyapi.com/api/character/?page=';
 let allCharactersArray = []
 let nameArray = []
 let page;
+const idURL = 'https://rickandmortyapi.com/api/character/'
 
 //Copying names of all characters to array for pickle rick button function
-allCharactersArray = ($.ajax(pageURL).then(function(evt){
-    const pageLength = evt.info.pages
-    nameArray;
-    for (let i = 1; i <= pageLength; i++){
-        $.ajax(pageURL + i).then(function(evt2){
-            for (let j = 0; j < pageLength; j++){
-                nameArray.push(evt2.results[j].name)                
-            }
-        })
-    }
-}))
+// allCharactersArray = ($.ajax(pageURL).then(function(evt){
+//     const pageLength = evt.info.pages
+//     nameArray;
+//     for (let i = 1; i <= pageLength; i++){
+//         $.ajax(pageURL + i).then(function(evt2){
+//             for (let j = 0; j < pageLength; j++){
+//                 nameArray.push(evt2.results[j].name)                
+//             }
+//         })
+//     }
+// }))
 
 //Event initiation
 $form.on('submit', handleSubmit)   //Form submit event
@@ -40,10 +41,10 @@ function render(evt){
 //Pickle Rick - Render retrieved values to HTML
 function renderRandom(randEvt){  
     $main.html(`
-        <p>Name: ${randEvt.results[0].name}</p>
-        <p>Species: ${randEvt.results[0].species}</p>
-        <p>Status: ${randEvt.results[0].status}</p>
-        <div><img src="${randEvt.results[0].image}"></div>
+        <p>Name: ${randEvt.name}</p>
+        <p>Species: ${randEvt.species}</p>
+        <p>Status: ${randEvt.status}</p>
+        <div><img src="${randEvt.image}"></div>
     `)
 }
 
@@ -70,24 +71,18 @@ function handleSubmit(event){
     })
 }
 //Handle Pickle Rick event, prevent page reload, generate random number based on 
-//the length of all characters in the API, remove spaces and inser + chars for the
-//URL rules, remove - and insert + chars to obey URL rules, add URL and formatted 
-//name to a URL variable to be searched with AJAX, search, for that character via
-//promise, then call renderRandom function.
+//the length of all characters in the API, add random number to URL, search, for 
+//that character via promise, then call renderRandom function.
 function handleRandomEvent(listener){
     listener.preventDefault();
+    let randomNum = Math.floor(Math.random() * 827)
 
-    let randomNum = Math.floor(Math.random() * nameArray.length)
-    let nameSpaces = nameArray[randomNum]
-    let nameFirstFix = nameSpaces.split(' ').join('+')
-    let nameSecondFix = nameFirstFix.split('-').join('+')
-    let testURL = URL + nameSecondFix
-    
-    $.ajax(testURL).then(function(par){
+    $.ajax(idURL + randomNum).then(function(par){
+        console.log(par)
         renderRandom(par)
-    }, 
+    },
     function(error){
-        console.log('Resultanat error: ' + error)
+        console.log('Resultant error: ' + error)
         backupFunction();
     })
 }
@@ -107,7 +102,7 @@ function backupFunction() {
     })
 }
 
+//Takes the page length value from the event object and picks a random number based on that length
 function pageRandom(pages){
-    //console.log(pages)
     page = Math.floor(Math.random() * (pages - 1) + 1)    
 }
