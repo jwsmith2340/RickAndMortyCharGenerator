@@ -1,32 +1,17 @@
-//Global variable declarations
+//GLOBAL VARIABLE DECLARATIONS
 const $main = $('main')
 const $input = $('input[type="text"]')
 const $form = $('form')
 const URL = 'https://rickandmortyapi.com/api/character/?name='
 const pageURL = 'https://rickandmortyapi.com/api/character/?page=';
-let allCharactersArray = []
-let nameArray = []
-let page;
 const idURL = 'https://rickandmortyapi.com/api/character/'
+let page;
 
-//Copying names of all characters to array for pickle rick button function
-// allCharactersArray = ($.ajax(pageURL).then(function(evt){
-//     const pageLength = evt.info.pages
-//     nameArray;
-//     for (let i = 1; i <= pageLength; i++){
-//         $.ajax(pageURL + i).then(function(evt2){
-//             for (let j = 0; j < pageLength; j++){
-//                 nameArray.push(evt2.results[j].name)                
-//             }
-//         })
-//     }
-// }))
-
-//Event initiation
+//EVENT INITIATION
 $form.on('submit', handleSubmit)   //Form submit event
 $('#pickleRick').on('click', handleRandomEvent) //Pickle Rick event
 
-//Function Block
+//FUNCTION BLOCK
 
 //Input Submit - Render retrieved values to HTML
 function render(evt){ 
@@ -58,7 +43,6 @@ function handleSubmit(event){
     $input.val(''); 
 
     $.ajax(URL + userValue).then(function(param){
-        //console.log(param)
         pageRandom(param.info.pages);
         $.ajax(pageURL + page + '&name=' + userValue).then(function(finalParam){
             render(finalParam);
@@ -78,7 +62,6 @@ function handleRandomEvent(listener){
     let randomNum = Math.floor(Math.random() * 827)
 
     $.ajax(idURL + randomNum).then(function(par){
-        console.log(par)
         renderRandom(par)
     },
     function(error){
