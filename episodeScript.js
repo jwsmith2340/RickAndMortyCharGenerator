@@ -1,7 +1,7 @@
 const $main = $('main')
 const $input = $('input[type="text"]')
 const $form = $('form')
-const URL = 'https://rickandmortyapi.com/api/episode'
+const URL = 'https://rickandmortyapi.com/api/episode/'
 const URLname = 'https://rickandmortyapi.com/api/episode?name='
 
 $form.on('submit', searchEpisode)
@@ -12,6 +12,7 @@ $form.on('submit', searchEpisode)
 
 function searchEpisode(event){
     event.preventDefault();
+    $('#main').html('');
     let userValue = $input.val();
     if (userValue === '') return;
     $input.val('')
@@ -41,11 +42,14 @@ function renderChars(evt){
     for (let i = 0; i < evt.length; i++){
         $.ajax(evt[i]).then(function(name){
             console.log(name.name)
-            $('#main').append(`<div class="episode_div"><img class="episode_images" src="${name.image}"</div>`)
-            
+            $('#main').append(`<div class="episode_div"><img class="episode_images" src="${name.image}"</div>`)   
         })  
     }
 }
+
+
+
+
 
 
 
