@@ -27,6 +27,7 @@ function searchEpisode(event){
     },
     function(error){
         console.log('Resultant error: ' + error)
+        backupFunction();
     })
 }
 
@@ -45,6 +46,7 @@ function randomEpisode(event){
     },
     function(error){
         console.log('Resultant error: ' + error)
+        backupFunction();
     })
 }
 
@@ -72,4 +74,11 @@ function renderChars(evt){
 function renderRandom(num){
     $main.html(`
     <p class="episodeTitle">Episode Name: ${num.name}`)
+}
+
+function backupFunction(){
+    $.ajax(URL + 24).then(function(par){
+        renderRandom(par);
+        renderChars(par.characters)
+    })
 }
