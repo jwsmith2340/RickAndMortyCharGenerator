@@ -1,16 +1,19 @@
+//GLOBAL VARIABLE DECLARATIONS
 const $main = $('main')
 const $input = $('input[type="text"]')
 const $form = $('form')
 const URL = 'https://rickandmortyapi.com/api/episode/'
 const URLname = 'https://rickandmortyapi.com/api/episode?name='
 
+//EVENT INITIATION
 $form.on('submit', searchEpisode)
 $('#pickleRick').on('click', randomEpisode)
 
-// console.log($.ajax('https://rickandmortyapi.com/api/character/1').then(function(test){
-//     console.log(test.name)
-// }))
+//FUNCTION BLOCK
 
+//Handle submit button, prevent page reload, require user input text, and assign
+//The user's val to a local variable to be used to concatonate the URL for AJAX request
+//Input field is then cleared, ajax retrieval initiates render(), error contingency in place
 function searchEpisode(event){
     event.preventDefault();
     $('#main').html('');
@@ -19,8 +22,6 @@ function searchEpisode(event){
     $input.val('')
 
     $.ajax(URLname + userValue).then(function(par){
-        //console.log(par)
-        //console.log(par.results[0].characters)
         renderName(par)
         renderChars(par.results[0].characters)
     },
@@ -29,6 +30,9 @@ function searchEpisode(event){
     })
 }
 
+//Handle Pickle Rick event, prevent page reload, generate random number based on 
+//the length of all characters in the API, add random number to URL, search, for 
+//that character via promise, then call renderRandom function.
 function randomEpisode(event){
     event.preventDefault();
     $('#main').html('');
@@ -38,17 +42,20 @@ function randomEpisode(event){
         renderRandom(evt)
         //console.log(evt.characters)
         renderChars(evt.characters)
+    },
+    function(error){
+        console.log('Resultant error: ' + error)
     })
 }
 
+//Input Submit - Render episode name and populate value to main
 function renderName(evt){
-    //console.log(evt.results[0].name)
-    //console.log(evt)
     $main.html(`
         <p class="episodeTitle">Episode Name: <strong>${evt.results[0].name}</strong>`)
         renderChars(evt)
 }
 
+//Input Submit and Pickle Rick - Render character list, populate images to HTML, limit to 28 returns
 function renderChars(evt){
     // console.log(evt)
     // console.log(evt.length)
@@ -61,25 +68,8 @@ function renderChars(evt){
     }
 }
 
+//Input Pickle Rick - Render episode name and populate value to main
 function renderRandom(num){
     $main.html(`
     <p class="episodeTitle">Episode Name: ${num.name}`)
 }
-
-
-
-
-
-
-// $.ajax(URL).then(function(evt){
-//     console.log(evt)
-//     //console.log(evt.info.pages)
-//    for (let i = 1; i <= evt.info.pages; i++){
-//        $.ajax(URL + '?page=' + i).then(function(par){
-//            //console.log(par)
-//             for (let j = 0; j < par.results.length; j++){
-//                 console.log(par.results[j].name)
-//            }
-//        })
-//    }
-// })
