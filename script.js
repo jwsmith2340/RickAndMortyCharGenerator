@@ -6,6 +6,7 @@ const URL = 'https://rickandmortyapi.com/api/character/?name='
 const pageURL = 'https://rickandmortyapi.com/api/character/?page=';
 let allCharactersArray = []
 let nameArray = []
+let page;
 
 //Copying names of all characters to array for pickle rick button function
 allCharactersArray = ($.ajax(pageURL).then(function(evt){
@@ -29,7 +30,6 @@ $('#pickleRick').on('click', handleRandomEvent) //Pickle Rick event
 //Input Submit - Render retrieved values to HTML
 function render(evt){ 
     let randomIndex = arrayRandomizer(evt);
-        console.log(evt)
     $main.html(`
         <p>Name: ${evt.results[randomIndex].name}</p>
         <p>Species: ${evt.results[randomIndex].species}</p>
@@ -57,7 +57,12 @@ function handleSubmit(event){
     $input.val(''); 
 
     $.ajax(URL + userValue).then(function(param){
-        render(param);
+        //console.log(param)
+        pageRandom(param.info.pages);
+        $.ajax(pageURL + page + '&name=' + userValue).then(function(finalParam){
+            render(finalParam);
+        })
+        
     },
     function(error){
         console.log('Resultant error: ' + error);
@@ -100,4 +105,9 @@ function backupFunction() {
     $.ajax(URL + 'pickle+rick').then(function(pa){
         renderRandom(pa)
     })
+}
+
+function pageRandom(pages){
+    //console.log(pages)
+    page = Math.floor(Math.random() * (pages - 1) + 1)    
 }
