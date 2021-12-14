@@ -124,7 +124,7 @@ h3 {
 #main {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: 93px;
+    grid-auto-rows: 70px;
     margin-top: 2px;
     margin-bottom: 0px;
     
@@ -136,7 +136,7 @@ h3 {
 }
 
 .episode_images {
-    height: 80px;
+    height: 60px;
     margin: 0;
     grid-template-rows: 80px;
 }
