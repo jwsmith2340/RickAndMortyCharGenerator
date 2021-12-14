@@ -73,7 +73,7 @@ function handleSubmit(event){
 //the length of all characters in the API, remove spaces and inser + chars for the
 //URL rules, remove - and insert + chars to obey URL rules, add URL and formatted 
 //name to a URL variable to be searched with AJAX, search, for that character via
-//promise, then call renderRandom function
+//promise, then call renderRandom function.
 function handleRandomEvent(listener){
     listener.preventDefault();
 
