@@ -1,6 +1,6 @@
 # Rick an Morty Random Character Generator
 
-This app generates a random iteration of characters in the Rick and Morty universe. In keeping with the spirit of the show, when you search for a character, you could return any version from the multiverse. So, search for Rick a few times in a row and see which versions you end up with.
+This app generates a random iteration of characters, episodes, or locations in the Rick and Morty universe. In keeping with the spirit of the show, when you search for a character, you could return any version from the multiverse. So, search for Rick a few times in a row and see which versions you end up with. Likewise, search for earth a few times, and see which characters are from that version of earth. You can also see which characters were featured in each episode from the episodes page. 
 ***
 ### Technologies Used
 
@@ -12,19 +12,24 @@ This app generates a random iteration of characters in the Rick and Morty univer
 ***
 ### Screenshots
 
-**Desktop Format**
+**Desktop - Home Page**
 
-[![Screen-Shot-2021-12-13-at-1-10-57-PM.png](https://i.postimg.cc/d0ndnNhY/Screen-Shot-2021-12-13-at-1-10-57-PM.png)](https://postimg.cc/XZGpY8KH)
-
-
-**Tablet Format**
-
-[![127-0-0-1-5500-index-html-i-Pad-1.png](https://i.postimg.cc/7PjBgbvN/127-0-0-1-5500-index-html-i-Pad-1.png)](https://postimg.cc/kDFFCJgV)
+[![Screen-Shot-2021-12-15-at-9-25-41-AM.png](https://i.postimg.cc/nhZSqyBh/Screen-Shot-2021-12-15-at-9-25-41-AM.png)](https://postimg.cc/7fsNkQKF)
 
 
-**Mobile Format**
+**Mobile Format - Locations Page**
 
-[![127-0-0-1-5500-index-html-i-Phone-X-1.png](https://i.postimg.cc/mrrNxGfD/127-0-0-1-5500-index-html-i-Phone-X-1.png)](https://postimg.cc/pmgn84db)
+[![127-0-0-1-5501-locations-html-i-Phone-X.png](https://i.postimg.cc/QxKSFd7G/127-0-0-1-5501-locations-html-i-Phone-X.png)](https://postimg.cc/tYyFfyD2)
+
+
+**Tablet Format - Episodes Page**
+
+[![127-0-0-1-5501-episodes-html-i-Pad.png](https://i.postimg.cc/cL2SQH9R/127-0-0-1-5501-episodes-html-i-Pad.png)](https://postimg.cc/CRGX0FV5)
+
+
+**Desktop Format - Characters Page**
+
+[![Screen-Shot-2021-12-15-at-9-23-42-AM.png](https://i.postimg.cc/k5QH0nC8/Screen-Shot-2021-12-15-at-9-23-42-AM.png)](https://postimg.cc/67QzRxy5)
 ***
 ### Getting Started
 
