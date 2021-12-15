@@ -59,10 +59,7 @@ function renderName(evt){
 
 //Input Submit and Pickle Rick - Render character list, populate images to HTML, limit to 28 returns
 function renderChars(evt){
-    // console.log(evt)
-    // console.log(evt.length)
     for (let i = 0; i < evt.length; i++){
-        //if (i === 28){ return;}
         $.ajax(evt[i]).then(function(name){
             console.log(name.name)
             $('#main').append(`<div class="episode_div"><img class="episode_images" src="${name.image}"</div>`)   
