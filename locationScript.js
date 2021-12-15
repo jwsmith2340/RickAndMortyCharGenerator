@@ -3,7 +3,7 @@ const URL = 'https://rickandmortyapi.com/api/location'
 const URLname = 'https://rickandmortyapi.com/api/location/?name='
 const URLpage = 'https://rickandmortyapi.com/api/location/?page='
 const $main = $('main')
-const $input = $('input')
+const $input = $('input[type="text"')
 const $form = $('form')
 let page;
 let userInput;
@@ -19,11 +19,11 @@ $('#pickleRick').on('click', handlePickleRick)  //Pickle Rick event
 //cleared, ajax retrieval initiates randomizePlanet(), error contingency in place
 function handleSubmit(evt){
     evt.preventDefault();
-    $('#main_small').html('')
-    $('#main').html('');
+    if (!$input.val()) return;
     userInput = $input.val();
-    if (userInput === '') return;
     $input.val('')
+    $('#main_small').html('')
+    $('#main').html('')
 
     $.ajax(URLname + userInput).then(function(par){
         randomizePlanet(par)
