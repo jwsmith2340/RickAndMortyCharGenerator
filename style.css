@@ -316,4 +316,9 @@ h3 {
         margin-top: 2px;
         margin-bottom: 0px;
     }
+
+    .location_small_images{
+        margin-left: 8px;
+        height: 90px;
+    }
 }
