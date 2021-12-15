@@ -1,10 +1,10 @@
 //GLOBAL VARIABLE DECLARATIONS
+const URL = 'https://rickandmortyapi.com/api/character/?name='
+const pageURL = 'https://rickandmortyapi.com/api/character/?page='
+const idURL = 'https://rickandmortyapi.com/api/character/'
 const $main = $('main')
 const $input = $('input[type="text"]')
 const $form = $('form')
-const URL = 'https://rickandmortyapi.com/api/character/?name='
-const pageURL = 'https://rickandmortyapi.com/api/character/?page=';
-const idURL = 'https://rickandmortyapi.com/api/character/'
 let page;
 
 //EVENT INITIATION
