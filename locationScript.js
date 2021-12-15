@@ -1,4 +1,4 @@
-//GLOBAL 
+//GLOBAL VARIABLE DECLARATIONS
 const URL = 'https://rickandmortyapi.com/api/location'
 const URLname = 'https://rickandmortyapi.com/api/location/?name='
 const URLpage = 'https://rickandmortyapi.com/api/location/?page='
@@ -8,11 +8,15 @@ const $form = $('form')
 let page;
 let userInput;
 
-//Event initiation
-$form.on('submit', handleSubmit)
-$('#pickleRick').on('click', handlePickleRick)
+//EVENT INITIATION
+$form.on('submit', handleSubmit)    //Form submit event
+$('#pickleRick').on('click', handlePickleRick)  //Pickle Rick event
 
-//Form input - handles user submissions
+//FUNCTION BLOCK
+
+//Handles submit button, prevents page load, clears html values from prior searches, requires user
+//input, that input is assigned to a global variable to concatonate URL for AJAX request. Input is 
+//cleared, ajax retrieval initiates randomizePlanet(), error contingency in place
 function handleSubmit(evt){
     evt.preventDefault();
     $('#main_small').html('')
@@ -29,7 +33,8 @@ function handleSubmit(evt){
     })
 }
 
-//Pickle Rick - Handles random event
+//Handle Pickle Rick event, prevent page reload, clears html values, ajax request, 
+//that value then sent to pickleRandomizePlanet function
 function handlePickleRick(evt){
     evt.preventDefault();
     $main.html('')
@@ -37,7 +42,6 @@ function handlePickleRick(evt){
     $('#main_small').html('')
 
     $.ajax(URL).then(function(par){
-        console.log(par)
         pickleRandomizePlanet(par)
     })
 }
@@ -50,6 +54,7 @@ function randomizePlanet(data){
     })
 }
 
+//Calls page randomizer function, ajax request without user input, initiates render planet
 function pickleRandomizePlanet(data){
     pageRandom(data.info.pages)
     $.ajax(URLpage + page).then(function(info){
@@ -70,7 +75,9 @@ function renderPlanet(event){
         renderChars(event.results[randomArray].residents)
 }
 
-//Render character images
+//Render character images, contingencies in place for length === 0 for a message to come 
+//up in place of the expected image, classes are made in the div and image html elements
+//in the event that there are less than five characters due to formatting issues with CSS
 function renderChars(evt){
     if (evt.length === 0){
         $('main').append('<p><strong>There are no permanent residents of this location</strong>')
