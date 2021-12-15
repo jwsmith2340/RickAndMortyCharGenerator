@@ -147,6 +147,17 @@ h3 {
     grid-template-rows: 80px;
 }
 
+#main_small{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location_small_images{
+    margin-left: 5px;
+    height: 65px;
+}
 
 /* TABLET OPTIMIZATION */
 @media only screen and (min-width: 768px){
