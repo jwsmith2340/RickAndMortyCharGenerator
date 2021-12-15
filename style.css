@@ -14,6 +14,29 @@ body {
     background-attachment: fixed;
 }
 
+#home_page{
+    color:white;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+#home_header{
+    margin-bottom: 10px;
+}
+
+#home_nav{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.home_links{
+    font-size: 40px;
+}
+
 header{
     display: flex;
     justify-content: space-evenly;
