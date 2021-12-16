@@ -26,7 +26,7 @@ $('#main_small').on('click', 'img', function(evt){
     testString = testString.substring(49) //Removes all string chars before char index
     $.ajax(URLcharacter + testString).then(function(ev){
         renderClickedChar(ev)
-    })
+        })
     })
 //FUNCTION BLOCK
 
@@ -116,15 +116,10 @@ function renderChars(evt){
 }
 
 function renderClickedChar(object){
-
-    console.log(object)
-    console.log(object.name)
-    console.log(object.species)
-    console.log(object.status)
-
-    $('#mainInfo').html(`
+    $.ajax(object.episode[0]).then(function(episode){
+        $('#mainInfo').html(`
         <p class="imgInfo">Name: ${object.name}</p>
-        <p class="imgInfo">Species: ${object.species}</p>
-        <p class="imgInfo">Status: ${object.status}</p>
-    `)
+        <p class="imgInfo">First seen in: ${episode.name}</p>
+        `)
+    })
 }
