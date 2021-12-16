@@ -19,12 +19,12 @@ This app generates a random iteration of characters, episodes, or locations in t
 
 **Mobile Format - Locations Page**
 
-[![127-0-0-1-5501-locations-html-i-Phone-X.png](https://i.postimg.cc/QxKSFd7G/127-0-0-1-5501-locations-html-i-Phone-X.png)](https://postimg.cc/tYyFfyD2)
+[![127-0-0-1-5501-locations-html-i-Phone-X-1.png](https://i.postimg.cc/vZMD3Zx1/127-0-0-1-5501-locations-html-i-Phone-X-1.png)](https://postimg.cc/KRqZYFNF)
 
 
 **Tablet Format - Episodes Page**
 
-[![127-0-0-1-5501-episodes-html-i-Pad.png](https://i.postimg.cc/cL2SQH9R/127-0-0-1-5501-episodes-html-i-Pad.png)](https://postimg.cc/CRGX0FV5)
+[![127-0-0-1-5501-episodes-html-i-Pad-1.png](https://i.postimg.cc/FHWm3ryX/127-0-0-1-5501-episodes-html-i-Pad-1.png)](https://postimg.cc/rDrvLLZf)
 
 
 **Desktop Format - Characters Page**
@@ -35,8 +35,8 @@ This app generates a random iteration of characters, episodes, or locations in t
 
 [Click Here](https://relaxed-noether-400bbe.netlify.app/) to see the deployed app!
 
-To begin, just type in the name of your favorite character, or if you want to get really random, just type in a single character and see what comes back! 
+To begin, just type in the name of your favorite character, episode, or location, or if you want to get really random, just click on Pickle Rick and see what comes back! 
 ***
 ### Future Enhancements
 
-Future plans include polishing CSS styling. There are also plans to expand this app into a larger one that allows you to search for locations and episodes as well.
+Future plans include polishing CSS styling.
