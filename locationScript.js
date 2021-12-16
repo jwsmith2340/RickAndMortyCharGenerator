@@ -5,13 +5,29 @@ const URLpage = 'https://rickandmortyapi.com/api/location/?page='
 const $main = $('main')
 const $input = $('input[type="text"')
 const $form = $('form')
+const URLcharacter = 'https://rickandmortyapi.com/api/character/'
 let page;
 let userInput;
 
 //EVENT INITIATION
 $form.on('submit', handleSubmit)    //Form submit event
 $('#pickleRick').on('click', handlePickleRick)  //Pickle Rick event
-
+$('#main').on('click', 'img', function(evt){
+    let testUrl = evt.target.src
+    let testString = testUrl.slice(0, -5) //Removes ' .jpeg ' from the image source
+    testString = testString.substring(49) //Removes all string chars before char index
+    $.ajax(URLcharacter + testString).then(function(ev){
+        renderClickedChar(ev)
+    })
+})
+$('#main_small').on('click', 'img', function(evt){
+    let testUrl = evt.target.src
+    let testString = testUrl.slice(0, -5) //Removes ' .jpeg ' from the image source
+    testString = testString.substring(49) //Removes all string chars before char index
+    $.ajax(URLcharacter + testString).then(function(ev){
+        renderClickedChar(ev)
+    })
+    })
 //FUNCTION BLOCK
 
 //Handles submit button, prevents page load, clears html values from prior searches, requires user
@@ -24,6 +40,7 @@ function handleSubmit(evt){
     $input.val('')
     $('#main_small').html('')
     $('#main').html('')
+    $('#mainInfo').html('')
 
     $.ajax(URLname + userInput).then(function(par){
         randomizePlanet(par)
@@ -40,6 +57,7 @@ function handlePickleRick(evt){
     $main.html('')
     $('#main').html('')
     $('#main_small').html('')
+    $('#mainInfo').html('')
 
     $.ajax(URL).then(function(par){
         pickleRandomizePlanet(par)
@@ -86,15 +104,27 @@ function renderChars(evt){
     if (evt.length < 5){
         for (let i = 0; i < evt.length; i++){
             $.ajax(evt[i]).then(function(name){
-                console.log(name)
                 $('#main_small').append(`<div class="location_small"><img class="location_small_images" src="${name.image}"</div>`)   
             })  
         }
     }else if (evt.length >= 5) {
         for (let i = 0; i < evt.length; i++){
         $.ajax(evt[i]).then(function(name){
-            console.log(name)
             $('#main').append(`<div class="episode_div"><img class="episode_images" src="${name.image}"</div>`)   
         })  
     }}
+}
+
+function renderClickedChar(object){
+
+    console.log(object)
+    console.log(object.name)
+    console.log(object.species)
+    console.log(object.status)
+
+    $('#mainInfo').html(`
+        <p class="imgInfo">Name: ${object.name}</p>
+        <p class="imgInfo">Species: ${object.species}</p>
+        <p class="imgInfo">Status: ${object.status}</p>
+    `)
 }
