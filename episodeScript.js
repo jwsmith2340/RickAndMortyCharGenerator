@@ -26,6 +26,7 @@ $('#main').on('click', 'img', function(evt){
 function searchEpisode(event){
     event.preventDefault();
     $('#main').html('');
+    $('#mainInfo').html('')
     let userValue = $input.val();
     if (userValue === '') return;
     $input.val('')
@@ -46,6 +47,7 @@ function searchEpisode(event){
 function randomEpisode(event){
     event.preventDefault();
     $('#main').html('');
+    $('#mainInfo').html('')
     let random = Math.floor(Math.random() * 52)
     $.ajax(URL + random).then(function(evt){
         renderRandom(evt)
@@ -88,9 +90,6 @@ function backupFunction(){
 
 function renderClickedChar(object){
     $.ajax(object.episode[0]).then(function(episode){
-        console.log(object)
-        console.log(object.name)
-        console.log(episode.name)
         $('#mainInfo').html(`
         <p class="imgInfo">Name: ${object.name}</p>
         <p class="imgInfo">First seen in: ${episode.name}</p>
