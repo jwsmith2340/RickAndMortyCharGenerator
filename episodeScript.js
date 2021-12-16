@@ -4,10 +4,19 @@ const $input = $('input[type="text"]')
 const $form = $('form')
 const URL = 'https://rickandmortyapi.com/api/episode/'
 const URLname = 'https://rickandmortyapi.com/api/episode?name='
+const URLcharacter = 'https://rickandmortyapi.com/api/character/'
 
 //EVENT INITIATION
 $form.on('submit', searchEpisode)
 $('#pickleRick').on('click', randomEpisode)
+$('#main').on('click', 'img', function(evt){
+    let testUrl = evt.target.src
+    let testString = testUrl.slice(0, -5) //Removes ' .jpeg ' from the image source
+    testString = testString.substring(49) //Removes all string chars before char index
+    $.ajax(URLcharacter + testString).then(function(ev){
+        renderClickedChar(ev)
+    })
+})
 
 //FUNCTION BLOCK
 
@@ -38,10 +47,8 @@ function randomEpisode(event){
     event.preventDefault();
     $('#main').html('');
     let random = Math.floor(Math.random() * 52)
-    //console.log(random)
     $.ajax(URL + random).then(function(evt){
         renderRandom(evt)
-        //console.log(evt.characters)
         renderChars(evt.characters)
     },
     function(error){
@@ -61,7 +68,6 @@ function renderName(evt){
 function renderChars(evt){
     for (let i = 0; i < evt.length; i++){
         $.ajax(evt[i]).then(function(name){
-            console.log(name.name)
             $('#main').append(`<div class="episode_div"><img class="episode_images" src="${name.image}"</div>`)   
         })  
     }
@@ -77,5 +83,17 @@ function backupFunction(){
     $.ajax(URL + 24).then(function(par){
         renderRandom(par);
         renderChars(par.characters)
+    })
+}
+
+function renderClickedChar(object){
+    $.ajax(object.episode[0]).then(function(episode){
+        console.log(object)
+        console.log(object.name)
+        console.log(episode.name)
+        $('#mainInfo').html(`
+        <p class="imgInfo">Name: ${object.name}</p>
+        <p class="imgInfo">First seen in: ${episode.name}</p>
+        `)
     })
 }
