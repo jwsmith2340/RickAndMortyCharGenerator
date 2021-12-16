@@ -297,7 +297,7 @@ h3 {
     }
 
     #mainInfo{
-        width: 500px;
+        width: 700px;
         max-width: 700px;
     }
 }
@@ -374,5 +374,10 @@ h3 {
     .location_small_images{
         margin-left: 8px;
         height: 90px;
+    }
+
+    #mainInfo{
+        width: 900px;
+        max-width: 900px;
     }
 }
