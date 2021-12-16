@@ -158,11 +158,6 @@ h3 {
     align-items: center;
 }
 
-.episode_images {
-    height: 65px;
-    margin: 0;
-    grid-template-rows: 80px;
-}
 
 .episode_div {
     margin: 5px;
@@ -177,13 +172,38 @@ h3 {
     align-items: center;
 }
 
+#input.button{
+    min-width: 60px;
+}
+
 .location_small_images{
     margin-left: 5px;
     height: 65px;
 }
 
-#input.button{
-    min-width: 60px;
+
+.episode_images {
+    height: 65px;
+    grid-template-rows: 80px;
+}
+
+#mainInfo{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    font-family: Fuzzy Bubbles;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.imgInfo{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 /* TABLET OPTIMIZATION */
