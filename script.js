@@ -2,10 +2,12 @@
 const URL = 'https://rickandmortyapi.com/api/character/?name='
 const pageURL = 'https://rickandmortyapi.com/api/character/?page='
 const idURL = 'https://rickandmortyapi.com/api/character/'
+const baseURL = 'https://rickandmortyapi.com/api/character'
 const $main = $('main')
 const $input = $('input[type="text"]')
 const $form = $('form')
 let page;
+let randomNum = Math.floor(Math.random() * 827);
 
 //EVENT INITIATION
 $form.on('submit', handleSubmit)   //Form submit event
@@ -59,7 +61,7 @@ function handleSubmit(event){
 //that character via promise, then call renderRandom function.
 function handleRandomEvent(listener){
     listener.preventDefault();
-    let randomNum = Math.floor(Math.random() * 827)
+    pickleRandom();  
 
     $.ajax(idURL + randomNum).then(function(par){
         renderRandom(par)
@@ -88,4 +90,11 @@ function backupFunction() {
 //Takes the page length value from the event object and picks a random number based on that length
 function pageRandom(pages){
     page = Math.floor(Math.random() * (pages - 1) + 1)    
+}
+
+//Pickle rick character ID randomizer function
+function pickleRandom(){
+    $.ajax(baseURL).then(function(pa){
+        randomNum = Math.floor(Math.random() * pa.info.count + 1)
+    })
 }
